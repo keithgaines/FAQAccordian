@@ -1,13 +1,16 @@
 import React from 'react';
+import './App.css'
 
 const Card = ({ title, content, onClick, isExpanded }) => {
   return (
     <div className="faq-card">
       <div className="faq-card-header" onClick={onClick}>
         <h3 className="faq-card-title">{title}</h3>
-        <div className={`faq-card-icon ${isExpanded ? 'expanded' : ''}`}>
-          <span className="fas fa-chevron-down"></span>
-        </div>
+        <img 
+        src='../images/icon-arrow-down.svg' 
+        alt='expand'
+        className={isExpanded ? 'rotate' : ''}
+        />
       </div>
       {isExpanded && <div className="faq-card-content">{content}</div>}
     </div>

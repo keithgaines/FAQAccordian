@@ -3,11 +3,11 @@ import './App.css';
 import Card from './Cards';
 
 const cardData = [
-  { title: "How many team members can I invite?", content: "Content for Card 1" },
-  { title: "Card 2", content: "Content for Card 2" },
-  { title: "Card 3", content: "Content for Card 3" },
-  { title: "Card 4", content: "Content for Card 4" },
-  { title: "Card 5", content: "Content for Card 5" },
+  { title: "How many team members can I invite?", content: "You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan." },
+  { title: "What is the maximum file upload size?", content: "No more than 2GB. All files in your account must fit your allotted storage space." },
+  { title: "How do I reset my password?", content: "Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you." },
+  { title: "Can I cancel my subscription?", content: "Yes! Send us a message and we’ll process your request no questions asked." },
+  { title: "Do you provide additional support?", content: "Chat and email support is available 24/7. Phone lines are open during normal business hours." },
 ];
 
 const App = () => {
@@ -24,12 +24,13 @@ const App = () => {
   return (
     <div>
       <div className='headerimage'>
-        <img src='../images/illustration-woman-online-mobile.svg' />   
+        <img src='../images/illustration-woman-online-mobile.svg' alt='Header Image' />
       </div>
       <div className='container'>
         <div className='deskshadow'>
-          <img src='../images/bg-pattern-mobile.svg' />
+          <img src='../images/bg-pattern-mobile.svg' alt='Desktop shadow' />
         </div>
+        <h1>FAQ</h1>
         {cardData.map((card, index) => (
           <Card
             key={index}
@@ -39,6 +40,10 @@ const App = () => {
             isExpanded={expandedIndex === index}
           />
         ))}
+        <div className="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener noreferrer">Frontend Mentor</a>.
+          Coded by <a href="https://keithgaines.github.io">Keith Gaines</a>.
+        </div>
       </div>
     </div>
   );
