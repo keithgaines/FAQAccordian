@@ -1,25 +1,47 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Card from './Cards';
 
-function App() {
+const cardData = [
+  { title: "How many team members can I invite?", content: "Content for Card 1" },
+  { title: "Card 2", content: "Content for Card 2" },
+  { title: "Card 3", content: "Content for Card 3" },
+  { title: "Card 4", content: "Content for Card 4" },
+  { title: "Card 5", content: "Content for Card 5" },
+];
+
+const App = () => {
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const handleCardClick = (index) => {
+    if (expandedIndex === index) {
+      setExpandedIndex(null);
+    } else {
+      setExpandedIndex(index);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className='headerimage'>
+        <img src='../images/illustration-woman-online-mobile.svg' />   
+      </div>
+      <div className='container'>
+        <div className='deskshadow'>
+          <img src='../images/bg-pattern-mobile.svg' />
+        </div>
+        {cardData.map((card, index) => (
+          <Card
+            key={index}
+            title={card.title}
+            content={card.content}
+            onClick={() => handleCardClick(index)}
+            isExpanded={expandedIndex === index}
+          />
+        ))}
+      </div>
     </div>
   );
-}
+};
 
 export default App;
