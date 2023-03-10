@@ -7,12 +7,14 @@ const Card = ({ title, content, onClick, isExpanded }) => {
       <div className="faq-card-header" onClick={onClick}>
         <h3 className="faq-card-title">{title}</h3>
         <img 
-        src='../images/icon-arrow-down.svg' 
-        alt='expand'
-        className={isExpanded ? 'rotate' : ''}
+          src='../images/icon-arrow-down.svg' 
+          alt='expand'
+          className={isExpanded ? 'rotate' : ''}
         />
       </div>
-      {isExpanded && <div className="faq-card-content">{content}</div>}
+      <div className='cardcontent'>
+        {isExpanded && <div className="faq-card-content">{content}</div>}
+      </div>
     </div>
   );
 };
