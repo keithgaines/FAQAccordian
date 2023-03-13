@@ -5,7 +5,7 @@ const Card = ({ title, content, onClick, isExpanded }) => {
   return (
     <div className="faq-card">
       <div className="faq-card-header" onClick={onClick}>
-        <h3 className="faq-card-title">{title}</h3>
+        <h1 className="faq-card-title">{title}</h1>
         <img 
           src='../images/icon-arrow-down.svg' 
           alt='expand'
