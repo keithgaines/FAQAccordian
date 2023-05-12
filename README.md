@@ -1,4 +1,4 @@
-# Frontend Mentor - FAQ accordion card solution
+# FAQ accordion card 
 
 This is a solution to the [FAQ accordion card challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
@@ -39,8 +39,6 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
 
